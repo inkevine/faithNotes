@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bible Verse Saver</title>
+  <style>
+    body {
+      background-color: #bfdbfe; /* blue-100 */
+      font-family: sans-serif;
+      padding: 16px;
+      width: 256px; /* w-64 */
+    }
+
+    h3 {
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 600; /* font-semibold */
+      margin-top: 16px;
+      margin-bottom: 8px;
+      color: #1d4ed8; /* blue-700 */
+    }
+
+    #currentVerse {
+      color: #1f2937; /* gray-800 */
+      font-size: 0.875rem; /* text-sm */
+      margin-bottom: 12px;
+      padding: 8px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      word-wrap: break-word;
+    }
+
+    #saveVerse {
+      width: 100%;
+      background-color: #3b82f6; /* blue-500 */
+      color: #ffffff;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #saveVerse:hover {
+      background-color: #2563eb; /* blue-600 */
+    }
+
+    #savedList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px; /* space between items */
+    }
+
+    .savedVerse {
+      background-color: #ffffff;
+      padding: 8px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      color: #374151; /* gray-700 */
+      font-size: 0.875rem;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h3>Faith Notes</h3>
+  <div id="currentVerse" class="verse">
+    Loading...
+  </div>
+  <button id="saveVerse">Save Verse</button>
+  <h3>Saved Verses</h3>
+  <ul id="savedList"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
